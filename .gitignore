@@ -12,3 +12,7 @@ ipython_config.py
 */.ipynb_checkpoints/*
 *.ipynb_checkpoints
 Untitled*.ipynb
+
+
+/code/processed_scans/
+/code/processed_scans/*
