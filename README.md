@@ -16,19 +16,23 @@ pip install numpy pandas matplotlib torch torchvision scikit-image open3d
 ```
 
 
-### **Run the Pipeline**
 
-#### **1. Preprocess Data**
-Run `process_scans_in_batches()` from `process_scans.ipynb` to convert `.raw` files into `.npy` format.
+### **Folder Structure**
+Ensure your repository has the following structure:
+```
+/volumes                 # Contains raw ultrasonic scan files (.raw)
+/meshes                  # Contains ground truth mesh files (.ply)
+/processed_scans         # Stores processed .npy files
+/code
+    ├── process_scans.ipynb
+    ├── extract_data.py
+    ├── simple_unet.py
+    ├── model_2.ipynb
+    ├── ply_visualizer.ipynb
+    ├── raw_compressed_visualization.ipynb
+```
 
-#### **2. Extract Data Points**
-Use `extract_point_data()` in `extract_data.py` to extract significant points.
 
-#### **3. Train the Model**
-Run the training pipeline in `model_2.ipynb`.
-
-#### **4. Visualize Results**
-Use `ply_visualizer.ipynb` and `raw_compressed_visualization.ipynb` for point cloud and slice visualizations.
 
 ### **1. Data Preprocessing and Normalization**
    - **Objective:** Convert `.raw` files into normalized `.npy` arrays for faster processing and prepare data for model training.
@@ -84,18 +88,16 @@ Use `ply_visualizer.ipynb` and `raw_compressed_visualization.ipynb` for point cl
         ```
 
 
+### **Run the Pipeline**
 
-### **Folder Structure**
-Ensure your repository has the following structure:
-```
-/volumes                 # Contains raw ultrasonic scan files (.raw)
-/meshes                  # Contains ground truth mesh files (.ply)
-/processed_scans         # Stores processed .npy files
-/code
-    ├── process_scans.ipynb
-    ├── extract_data.py
-    ├── simple_unet.py
-    ├── model_2.ipynb
-    ├── ply_visualizer.ipynb
-    ├── raw_compressed_visualization.ipynb
-```
+#### **1. Preprocess Data**
+Run `process_scans_in_batches()` from `process_scans.ipynb` to convert `.raw` files into `.npy` format.
+
+#### **2. Extract Data Points**
+Use `extract_point_data()` in `extract_data.py` to extract significant points.
+
+#### **3. Train the Model**
+Run the training pipeline in `model_2.ipynb`.
+
+#### **4. Visualize Results**
+Use `ply_visualizer.ipynb` and `raw_compressed_visualization.ipynb` for point cloud and slice visualizations.
