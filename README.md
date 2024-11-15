@@ -16,22 +16,6 @@ pip install numpy pandas matplotlib torch torchvision scikit-image open3d
 ```
 
 
-### **Folder Structure**
-Ensure your repository has the following structure:
-```
-/volumes                 # Contains raw ultrasonic scan files (.raw)
-/meshes                  # Contains ground truth mesh files (.ply)
-/processed_scans         # Stores processed .npy files
-/code
-    ├── process_scans.ipynb
-    ├── extract_data.py
-    ├── simple_unet.py
-    ├── model_2.ipynb
-    ├── ply_visualizer.ipynb
-    ├── raw_compressed_visualization.ipynb
-```
-
-
 ### **Run the Pipeline**
 
 #### **1. Preprocess Data**
@@ -98,3 +82,20 @@ Use `ply_visualizer.ipynb` and `raw_compressed_visualization.ipynb` for point cl
         ```python
         verts, faces, _, _ = measure.marching_cubes(reconstructed_data, level=threshold)
         ```
+
+
+
+### **Folder Structure**
+Ensure your repository has the following structure:
+```
+/volumes                 # Contains raw ultrasonic scan files (.raw)
+/meshes                  # Contains ground truth mesh files (.ply)
+/processed_scans         # Stores processed .npy files
+/code
+    ├── process_scans.ipynb
+    ├── extract_data.py
+    ├── simple_unet.py
+    ├── model_2.ipynb
+    ├── ply_visualizer.ipynb
+    ├── raw_compressed_visualization.ipynb
+```
